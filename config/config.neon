@@ -1,0 +1,62 @@
+#
+# SECURITY WARNING: it is CRITICAL that this file & directory are NOT accessible directly via a web browser!
+#
+# If you don't protect this directory from direct web access, anybody will be able to see your passwords.
+# http://nette.org/security-warning
+#
+common:
+	parameters:
+		database:
+			driver: pdo_mysql
+			user: root
+			password: lamp
+			host: localhost
+			dbname: yetti
+			charset: utf8
+			collation: utf8_czech_ci
+			lazy: true
+		entities:
+			- %appDir%/Doctrine/Entities
+		proxies:
+			- %appDir%/Doctrine/Proxies	
+
+	#doctrine:
+		#connections:
+			#default: %database%
+	
+	php:
+		date.timezone: Europe/Prague
+		# zlib.output_compression: yes
+		default_charset: "UTF-8"
+		
+	nette:
+		session:
+			autoStart: smart			
+
+	services:
+		config:
+			class: Doctrine\ORM\Configuration
+			factory: Doctrine\ORM\Tools\Setup::createAnnotationMetadataConfiguration(%entities%, true)
+		entityManager:
+			class: Doctrine\ORM\EntityManager
+			factory: Doctrine\ORM\EntityManager::create(%database%, @config)
+		routerFactory: RouterFactory
+		router: @routerFactory::createRouter
+		abstractRepository: AbstractRepository
+		categoryRepository: CategoryRepository
+
+production < common: 
+	parameters:
+		driver: pdo_mysql
+		user: root
+		password: lamp
+		host: localhost
+		dbname: yetti
+
+development < common:
+	parameters:
+		driver: pdo_mysql
+		user: root
+		password: lamp
+		host: localhost
+		dbname: yetti

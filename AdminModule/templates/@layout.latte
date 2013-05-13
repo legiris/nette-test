@@ -1,0 +1,275 @@
+{**
+ * My Application layout template.
+ *
+ * @param string   $basePath web base path
+ * @param string   $robots   tell robots how to index the content of a page (optional)
+ * @param array    $flashes  flash messages
+ *}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Yetti">
+	<meta name="copyright" content="(C) design ALFA COMPUTER a.s., programming Yetti -- All rights reserved.">
+	<meta nema="keywords" content="PC,počítač,notebook,hardware,software">
+	<meta name="description" content="YETTI -- PC eshop">
+	<meta name="robots" content="{$robots}" n:ifset="$robots">
+
+	<title>{block title|striptags}Yetti &#8211; PC, hardware{/block}</title>
+
+	<link rel="shortcut icon" href="{$basePath}/favicon.ico">
+	<link rel="stylesheet" type="text/css" media="all" href="{$basePath}/css/all.css">
+	<link rel="stylesheet" type="text/css" media="all" href="{$basePath}/css/allnew.css">
+	<link rel="stylesheet" type="text/css" media="screen,projection,tv" href="{$basePath}/css/screen.css">
+	<link rel="stylesheet" type="text/css" media="print" href="{$basePath}/css/print.css">
+	<link rel="stylesheet" type="text/css" media="handheld" href="{$basePath}/css/handheld.css">
+	<link rel="alternative" type="application/rss+xml" title="Změny cen zboží" href="{$basePath}">
+	<link rel="alternative" type="application/rss+xml" title="Novinky" href="{$basePath}">
+	
+	<!-- <script type="text/javascript" async="" src="{$basePath}/js/ga.js"></script>-->
+	<!-- <script language="javascript" type="text/javascript" src="{$basePath}/js/mainff.js"></script>-->
+	<!-- <script type="text/javascript" src="{$basePath}/js/analytics.js"></script>-->
+	
+	{block head}{/block}
+</head>
+
+<!-- <body id="AlfaBody" onload="bLoad()";>-->
+<body id="AlfaBody">
+
+<!-- HEADING -->
+<table cellspacing="0" id="toppage"><tbody><tr>
+<td id="toplogo"><a href="{$basePath}">
+<img src="{$basePath}/images/yetti-transparent.png" width="179" height="55" alt="Logo firmy (zobrazí úvodní stránku)" title="Logo firmy (zobrazí úvodní stránku)"></a></td><td class="topspace"><div></div></td>
+<td style="display: none;"><a href="http://www.toplist.cz/hardware" target="_blank">
+<script language="javascript" type="text/javascript"><!--
+document.write('<img src="http://toplist.cz/dot.asp?id=69093&amp;http='+escape(document.referrer)+'&amp;wi='+escape(window.screen.width)+'&amp;he='+escape(window.screen.height)+'&amp;cd='+escape(window.screen.colorDepth)+'&amp;t='+escape(document.title)+'" width="1" height="1" border=0 alt="TOPlist" />');//--></script><img src="./alfacomp_files/dot.asp" width="1" height="1" border="0" alt="TOPlist"></a>
+<noscript>&lt;img src="http://toplist.cz/dot.asp?id=69093" border="0" alt="TOPlist" width="1" height="1" /&gt;</noscript><br>
+<a href="http://www.toplist.cz/virtualni-obchody" target="_blank">
+<script language="javascript" type="text/javascript"><!--
+document.write('<img src="http://toplist.cz/dot.asp?id=73947&amp;http='+escape(document.referrer)+'&amp;wi='+escape(window.screen.width)+'&amp;he='+escape(window.screen.height)+'&amp;cd='+escape(window.screen.colorDepth)+'&amp;t='+escape(document.title)+'" width="1" height="1" border=0 alt="TOPlist" />');//--></script><img src="./alfacomp_files/dot(1).asp" width="1" height="1" border="0" alt="TOPlist"></a>
+<noscript>&lt;img src="http://toplist.cz/dot.asp?id=73947" border="0" alt="TOPlist" width="1" height="1" /&gt;</noscript><br>
+</td>
+
+<td id="topimage"><img src="{$basePath}/images/toppage_duty.jpg" width="132" height="49" alt="Byli jsme zvoleni internetovým obchodem roku v kategorii elektro" title="Byli jsme zvoleni internetovým obchodem roku v kategorii elektro"></td>
+<td id="toptitle"><span>telefon</span>597 582 800<div><a href="mailto:xis@email.cz" title="Hlavní e-mailová adresa firmy" onmousedown="javascript: pageTracker._trackPageview(&#39;/kontakt-email/&#39;);">xis@email.cz</a></div></td>
+<td class="topspace"><div></div></td>
+<td id="topuname"><label title="Zadejte přihlašovací e-mailovou adresu">e-mail</label><br>
+<label title="Zadejte heslo pro přihlašovací e-mailovou adresu">heslo</label></td>
+<td id="topuser"><form action="http://www.alfacomp.cz/php/form.php" method="post">
+<input type="hidden" name="Redirect" value="index.php?eid=13W140#LoginUserForm">
+<input type="hidden" name="RedirectOK" value="index.php?eid=141140">
+<input type="text" name="email" value="" title="Zadejte přihlašovací e-mailovou adresu" class="text" maxlength="60"><br>
+<input type="password" name="passw" value="" title="Zadejte heslo pro přihlašovací e-mailovou adresu" class="text passw" maxlength="40">
+<input type="submit" name="loginuser" value="OK" title="Přihlásí uživatele dle zadaných údajů" class="btns">
+</form></td>
+<td id="topumenu"><s>&raquo; <a href="http://www.alfacomp.cz/php/index.php?eid=13X140" title="Zahájí registraci nového uživatele">nová registrace</a></s>
+<br><s>&raquo; <a href="http://www.alfacomp.cz/php/index.php?eid=13Z140" title="Zobrazí výhody poskytované registrovaným uživatelům">výhody registrace</a></s>
+<br><s>&raquo; <a href="http://www.alfacomp.cz/php/index.php?eid=13Y140" title="Zaslání přihlašovacích údajů na registrační e-mail">zapomenuté heslo</a></s>
+</td>
+<td class="topspace"><div></div></td>
+<td id="topbasket"><div id="basketcont" class="balloon dark" style="left: 472px; top: 8px; width: 458px; height: 86px;">
+<div class="btop" style="width: 426px;"></div><div class="bright" style="height: 76px;"></div><div class="bbottom" style="width: 426px;"></div><div class="bleft" style="height: 76px;"></div>
+<div class="btopleft"></div><div class="btopright"></div><div class="bbottomleft"></div><div class="bbottomright"></div>
+<div class="arrowright dark" style="left: 446px; top: 16px;"></div>
+<div class="text" style="width: 426px; height: 76px;"><h3>Nákupní košík je prázdný</h3><p>Zboží do košíku vložíte kliknutím na ikonu nákupního košíku v položce zboží.<br>Aby zboží zůstalo v košíku vloženo, je nutné mít povoleny cookies, jinak se po obnovení stránky košík znovu vyprázdní.</p></div>
+</div>
+<a href="http://www.alfacomp.cz/php/basket.php?eid=104140">
+<img src="{$basePath}/images/basket.gif" width="31" height="28" alt="" onmouseover="TimedElementShow(&#39;basketcont&#39;);" onmouseout="ElementHide(&#39;basketcont&#39;);">
+<br>0 ks<br>0,- Kč</a></td>
+</tr></tbody></table>
+<!-- /HEADING -->
+
+<!-- TOP MENU -->
+<div id="topmenu">
+<a href="{$basePath}" id="tMenu1">domů</a>
+<div></div><a href="{$basePath}/nakupni-kosik/" id="tMenu2">košík</a>
+<div></div><a href="{$basePath}/o-nakupu/" id="tMenu3" onmouseover="tmOver(this.id);" onmouseout="tmOut(this.id);">o nákupu</a>
+<p id="tMenu3s" onmouseover="tmOver(&#39;tMenu3&#39;);" onmouseout="tmOut(&#39;tMenu3&#39;);">
+<a href="{$basePath}/o-nakupu/jak-nakupovat/">Jak nakupovat</a>
+<a href="{$basePath}/o-nakupu/nakup-na-slovensko/">Nákup na Slovensko</a>
+<a href="{$basePath}/o-nakupu/pojisteni-zbozi/">Pojištění zboží</a><span class="spc"></span>
+<a href="{$basePath}/o-nakupu/obchodni-podminky/">Obchodní podmínky</a>
+<a href="{$basePath}/o-nakupu/dopravni-podminky/">Dopravní podmínky</a>
+<a href="{$basePath}/o-nakupu/platebni-podminky/">Platební podmínky</a><span class="spc"></span>
+<a href="{$basePath}/o-nakupu/reklamacni-rad">Reklamační řád</a>
+<a href="{$basePath}/o-nakupu/podminky-vraceni-dph">Podmínky vyplácení DPH</a>
+</p>
+
+<div></div><a href="{$basePath}/podpora/" id="tMenu5" onmouseover="tmOver(this.id);" onmouseout="tmOut(this.id);">podpora</a>
+<p id="tMenu5s" onmouseover="tmOver(&#39;tMenu5&#39;);" onmouseout="tmOut(&#39;tMenu5&#39;);">
+<a href="{$basePath}/podpora/dotazy-k-nakupu/">Dotazy k nákupu</a>
+<a href="{$basePath}/podpora/technicke-dotazy/">Technické dotazy</a><span class="spc"></span>
+<a href="{$basePath}/podpora/rizika/">Rizika používání nelegálního software</a>
+</p>
+<div></div><a href="{$basePath}/o-firme/" id="tMenu6" onmouseover="tmOver(this.id);" onmouseout="tmOut(this.id);" class="">o firmě</a>
+<p id="tMenu6s" onmouseover="tmOver(&#39;tMenu6&#39;);" onmouseout="tmOut(&#39;tMenu6&#39;);" style="left: 394px; display: none;">
+<a href="{$basePath}/o-firme/historie/">Historie</a>
+<a href="{$basePath}/o-firme/kariera/">Nabídka práce</a><span class="spc"></span>
+<a href="{$basePath}/o-firme/prodejna-v-brne/">Prodejna Brno</a>
+<a href="{$basePath}/o-firme/oteviraci-doba/">Otevírací doba</a><span class="spc"></span>
+</p>
+<div></div><a href="{$basePath}/kontakty" id="tMenu7">kontakty</a>
+<div></div><a href="{$basePath}/rss-kanaly" id="tMenu8" onmouseover="tmOver(this.id);" onmouseout="tmOut(this.id);">RSS</a>
+
+
+<div></div><a href="{$basePath}/moje-menu" id="tMenu12" onmouseover="tmOver(this.id);" onmouseout="tmOut(this.id);">moje menu</a>
+<p id="tMenu12s" onmouseover="tmOver(&#39;tMenu12&#39;);" onmouseout="tmOut(&#39;tMenu12&#39;);">
+<a href="http://www.alfacomp.cz/php/index.php?eid=13X140">Nová registrace</a>
+<a href="http://www.alfacomp.cz/php/index.php?eid=13W140">Přihlášení / odhlášení</a>
+<a href="http://www.alfacomp.cz/php/index.php?eid=13Y140">Zapomenuté heslo</a><span class="spc"></span>
+<span>Přihlašovací údaje</span>
+<span>Fakturační a dodací údaje</span>
+<span>Přehled objednávek</span>
+<a href="http://www.alfacomp.cz/php/index.php?eid=134140">Informace o zásilce</a><span class="spc"></span>
+<a href="http://www.alfacomp.cz/php/index.php?eid=104140">Nákupní košík</a>
+<span>Ulo·ení / načtení ko±íku</span>
+<a href="http://www.alfacomp.cz/php/index.php?eid=136140">Odkaz na obsah košíku</a><span class="spc"></span>
+<span>Oblíbené</span>
+<a href="http://www.alfacomp.cz/php/index.php?eid=10D140">Porovnat zboží</a>
+</p>
+<div></div><a href="{$basePath}/napoveda" id="tMenu13" onmouseover="tmOver(this.id);" onmouseout="tmOut(this.id);">nápověda</a>
+<p id="tMenu13s" onmouseover="tmOver(&#39;tMenu13&#39;);" onmouseout="tmOut(&#39;tMenu13&#39;);">
+<a href="http://www.alfacomp.cz/php/index.php?eid=116140">Jak nakupovat</a>
+<span>Verze stránek 3.27.710</span>
+</p>
+
+<div></div><a href="{$basePath}/admin" id="tMenu13" onmouseover="tmOver(this.id);" onmouseout="tmOut(this.id);">ADMIN</a>
+
+</div><div id="topmenushadow"></div>
+<!-- /TOP MENU -->
+
+<!-- LEFT SIDE MENU -->
+<!-- search -->
+<div id="leftpart">
+<div id="searchball" class="balloon dark" style="left: 173px; top: 157px; width: 472px; height: 176px;">
+<div class="btop" style="width: 440px;"></div><div class="bright" style="height: 166px;"></div><div class="bbottom" style="width: 440px;"></div><div class="bleft" style="height: 166px;"></div>
+<div class="btopleft"></div><div class="btopright"></div><div class="bbottomleft"></div><div class="bbottomright"></div>
+<div class="arrowleft dark" style="top: 46px;"></div>
+<div class="text" style="width: 440px; height: 166px;"><table cellspacing="0"><tbody><tr><th colspan="2"><b>Příklady hledání</b></th></tr>
+<tr><td class="name"><u>monitor</u></td><td>- nalezne záznamy obsahující <u>monitor</u>, <u>monitory</u>, <u>netmonitoring</u> apod.</td></tr>
+<tr class="odd"><td class="name"><u>monitor LCD</u></td><td>- nalezne záznamy obsahující <u>monitor</u> a zároveň <u>LCD</u></td></tr>
+<tr><td class="name"><u>+monitor +LCD</u></td><td>- nalezne stejné záznamy jako hledání <u>monitor LCD</u></td></tr>
+<tr class="odd"><td class="name"><u>+monitor -LCD</u></td><td>- nalezne záznamy obsahující <u>monitor</u> a zároveň neobsahující <u>LCD</u></td></tr>
+<tr><td class="name"><u>/monitor /LCD</u></td><td>- nalezne záznamy obsahující <u>monitor</u> nebo <u>LCD</u></td></tr>
+<tr class="odd"><td class="name"><u>"monitor LCD"</u></td><td>- frázi nelze hledat, uvozovky se pou·ívají jako jednotka palec, př. <u>17"</u></td></tr>
+<tr><td class="last" colspan="2">Nezadáte-li před hledané slovo znak + nebo -, automaticky se přidává +<br>Hledaná slova zadávejte s diakritikou, na velikosti písmen nezáleží.<br>Minimální délka hledaného slova je <b>2 znaky</b>.</td></tr></tbody></table></div>
+</div>
+
+<div class="h5frame"><h5>vyhledávání</h5></div>
+<div id="search" class="infbox">
+<form action="./alfacomp_files/alfacomp.htm" method="get" onsubmit="return (this.Search.value.length&gt;=2);">
+<input type="hidden" name="eid" value="106140">
+<s class="noact" title="Zobrazí parametry rozšířeného vyhledávání">&rsaquo;&rsaquo; </s>
+<input type="text" name="Search" value="" class="text" maxlength="120" onfocus="TimedElementShow(&#39;searchball&#39;);" onblur="ElementHide(&#39;searchball&#39;);">
+<select name="SearchType" onchange="this.form.Search.focus();"><option selected="selected" value="1">ve zboží</option><option value="2">ve zboží i archívním</option></select>
+<input type="image" name="_" src="{$basePath}/images/search.gif" title="Vyhledá zadaná slova ve zvoleném umístění" 
+onclick="if (this.form.Search.value.length&gt;=2) this.form.submit(); return false;">
+<input type="hidden" name="SearchSubmit" value="1">
+</form>
+
+<table cellspacing="0" onmouseover="TimedElementShow(&#39;mostsearch&#39;);" onmouseout="ElementHide(&#39;mostsearch&#39;);"><tbody><tr><th colspan="2">Nejhledanější:</th></tr>
+<tr><td class="num">1.</td><td><a href="http://www.alfacomp.cz/php/index.php?eid=106140&Search=NEXUS7C%20ASUS-1B002A&SearchType=1&SearchSubmit=1" 
+title="Hledáno 172810x">NEXUS7C ASUS-1B002A</a></td></tr><tr><td class="num">2.</td><td><a href="http://www.alfacomp.cz/php/index.php?eid=106140&Search=galaxy%20s4%20smartphone&SearchType=1&SearchSubmit=1" title="Hledáno 5374x">galaxy s4 smartphone</a></td></tr><tr><td class="num">3.</td><td><a href="http://www.alfacomp.cz/php/index.php?eid=106140&Search=%2Asleva&SearchType=1&SearchSubmit=1" title="Hledáno 3968x">*sleva</a></td></tr></tbody></table>
+
+<div id="mostsearch" class="box" onmouseover="ElementShow(&#39;mostsearch&#39;);" onmouseout="ElementHide(&#39;mostsearch&#39;);">
+<table cellspacing="0"><tbody><tr><th colspan="2">Nejhledanější:</th></tr>
+<tr><td class="num">1.</td><td><a href="http://www.alfacomp.cz/php/index.php?eid=106140&Search=NEXUS7C%20ASUS-1B002A&SearchType=1&SearchSubmit=1" title="Hledáno 172810x">NEXUS7C ASUS-1B002A</a></td><td class="cnt">172810x</td></tr><tr><td class="num">2.</td><td><a href="http://www.alfacomp.cz/php/index.php?eid=106140&Search=galaxy%20s4%20smartphone&SearchType=1&SearchSubmit=1" title="Hledáno 5374x">galaxy s4 smartphone</a></td><td class="cnt">5374x</td></tr><tr><td class="num">3.</td><td><a href="http://www.alfacomp.cz/php/index.php?eid=106140&Search=%2Asleva&SearchType=1&SearchSubmit=1" title="Hledáno 3968x">*sleva</a></td><td class="cnt">3968x</td></tr><tr><td class="num">4.</td><td><a href="http://www.alfacomp.cz/php/index.php?eid=106140&Search=HP%20ProBook%204540s&SearchType=1&SearchSubmit=1" title="Hledáno 3453x">HP ProBook 4540s</a></td><td class="cnt">3453x</td></tr><tr><td class="num">5.</td><td><a href="http://www.alfacomp.cz/php/index.php?eid=106140&Search=Logitech%20K400&SearchType=1&SearchSubmit=1" title="Hledáno 2102x">Logitech K400</a></td><td class="cnt">2102x</td></tr><tr><td class="num">6.</td><td><a href="http://www.alfacomp.cz/php/index.php?eid=106140&Search=HP%20655%20%28C4X78EA%23BCM%29&SearchType=1&SearchSubmit=1" title="Hledáno 1837x">HP 655 (C4X78EA#BCM)</a></td><td class="cnt">1837x</td></tr><tr><td class="num">7.</td><td><a href="http://www.alfacomp.cz/php/index.php?eid=106140&Search=Kingston%20SSDNOW%20V300%20-kit&SearchType=1&SearchSubmit=1" title="Hledáno 1654x">Kingston SSDNOW V300 -kit</a></td><td class="cnt">1654x</td></tr><tr><td class="num">8.</td><td><a href="http://www.alfacomp.cz/php/index.php?eid=106140&Search=HP%20ProBook%204340s%20%28H5H86EA%23BCM%29&SearchType=1&SearchSubmit=1" title="Hledáno 1609x">HP ProBook 4340s (H5H86EA#BCM)</a></td><td class="cnt">1609x</td></tr><tr><td class="num">9.</td><td><a href="http://www.alfacomp.cz/php/index.php?eid=106140&Search=GTX660%20VGA%20%2FGTX670%20VGA%20%2FGTX680%20VGA%20%2FGTX690%20VGA%20%2FTITAN%20VGA&SearchType=1&SearchSubmit=1" title="Hledáno 1532x">GTX660 VGA /GTX670 VGA /GTX680 VGA /GTX690 VGA /TITAN VGA</a></td><td class="cnt">1532x</td></tr><tr><td class="num">10.</td><td><a href="http://www.alfacomp.cz/php/index.php?eid=106140&Search=Genius%20Gila&SearchType=1&SearchSubmit=1" title="Hledáno 1482x">Genius Gila</a></td><td class="cnt">1482x</td></tr><tr><td class="num">11.</td><td><a href="http://www.alfacomp.cz/php/index.php?eid=106140&Search=Samsung%20notebook%20%2Asmon&SearchType=1&SearchSubmit=1" title="Hledáno 1305x">Samsung notebook *smon</a></td><td class="cnt">1305x</td></tr><tr><td class="num">12.</td><td><a href="http://www.alfacomp.cz/php/index.php?eid=106140&Search=Toshiba%20L8&SearchType=1&SearchSubmit=1" title="Hledáno 1242x">Toshiba L8</a></td><td class="cnt">1242x</td></tr><tr><td class="num">13.</td><td><a href="http://www.alfacomp.cz/php/index.php?eid=106140&Search=epson%20TANK&SearchType=1&SearchSubmit=1" title="Hledáno 1196x">epson TANK</a></td><td class="cnt">1196x</td></tr><tr><td class="num">14.</td><td><a href="http://www.alfacomp.cz/php/index.php?eid=106140&Search=MID%20Galaxy%20NOTE%2010.1&SearchType=1&SearchSubmit=1" title="Hledáno 1087x">MID Galaxy NOTE 10.1</a></td><td class="cnt">1087x</td></tr><tr><td class="num">15.</td><td><a href="http://www.alfacomp.cz/php/index.php?eid=106140&Search=tri%E8ko&SearchType=1&SearchSubmit=1" title="Hledáno 1086x">tričko</a></td><td class="cnt">1086x</td></tr><tr><td class="num">16.</td><td><a href="http://www.alfacomp.cz/php/index.php?eid=106140&Search=hern%ED%20notebook%20msi&SearchType=1&SearchSubmit=1" title="Hledáno 920x">herní notebook msi</a></td><td class="cnt">920x</td></tr><tr><td class="num">17.</td><td><a href="http://www.alfacomp.cz/php/index.php?eid=106140&Search=tablet&SearchType=1&SearchSubmit=1" title="Hledáno 866x">tablet</a></td><td class="cnt">866x</td></tr><tr><td class="num">18.</td><td><a href="http://www.alfacomp.cz/php/index.php?eid=106140&Search=Grid%202%20TrueFeel&SearchType=1&SearchSubmit=1" title="Hledáno 759x">Grid 2 TrueFeel</a></td><td class="cnt">759x</td></tr><tr><td class="num">19.</td><td><a href="http://www.alfacomp.cz/php/index.php?eid=106140&Search=tablet%20dvb&SearchType=1&SearchSubmit=1" title="Hledáno 652x">tablet dvb</a></td><td class="cnt">652x</td></tr><tr><td class="num">20.</td><td><a href="http://www.alfacomp.cz/php/index.php?eid=106140&Search=MSI%20N650Ti%20Boost&SearchType=1&SearchSubmit=1" title="Hledáno 601x">MSI N650Ti Boost</a></td><td class="cnt">601x</td></tr></tbody></table></div>
+</div>
+
+<div class="h6frame">
+<h6>&rsaquo; <a href="http://www.alfacomp.cz/php/index.php?eid=15K140" title="Přepne zobrazení na skupiny zboží">skupiny</a></h6></div>
+<div class="h6frame noactright">
+<h6 class="noactive">&rsaquo; <a href="http://www.alfacomp.cz/php/index.php?eid=15M240" title="Přepne zobrazení na výrobce zboží">výrobci</a></h6></div>
+<div class="floatend"></div>
+<div id="CompareProducts" class="balloon dark" style="left: 152px; top: 432px; width: 458px; height: 86px;">
+<div class="btop" style="width: 426px;"></div><div class="bright" style="height: 76px;"></div><div class="bbottom" style="width: 426px;"></div><div class="bleft" style="height: 76px;"></div>
+<div class="btopleft"></div><div class="btopright"></div><div class="bbottomleft"></div><div class="bbottomright"></div>
+<div class="arrowleft dark" style="top: 16px;"></div>
+<div class="text" style="width: 426px; height: 76px;"><h3>Nebylo vybráno zboží k porovnání</h3><p>Zboží k porovnání vyberete v detailu položky kliknutím na odkaz Přidat k porovnání.<br>Aby se zboží přidalo k porovnání, je nutné mít povoleny cookies, jinak se po obnovení stránky zboží z porovnání odstraní.</p></div>
+</div>
+
+<ul id="groups"><li><a href="http://www.alfacomp.cz/php/index.php?eid=10L140"><img src="{$basePath}/images/grpact.gif" width="13" height="13" alt="">Zboží v akci</a></li>
+<li><a href="http://www.alfacomp.cz/php/index.php?eid=10K140"><img src="{$basePath}/images/grpnew.gif" width="13" height="13" alt="">Novinky</a></li>
+<li><a href="http://www.alfacomp.cz/php/index.php?eid=10M140"><img src="{$basePath}/images/grpdisc.gif" width="13" height="13" alt="">Zlevněné zboží</a></li>
+<li><a href="http://www.alfacomp.cz/php/index.php?eid=10O140"><img src="{$basePath}/images/grpsale.gif" width="13" height="13" alt="">Výprodej</a></li>
+<li><a href="http://www.alfacomp.cz/php/index.php?eid=10D140" onmouseover="TimedElementShow(&#39;CompareProducts&#39;);" onmouseout="ElementHide(&#39;CompareProducts&#39;);">
+	<img src="{$basePath}/images/grpcomp.gif" width="13" height="13" alt="">Porovnat zboží (0 ks)</a></li>
+<li>&nbsp;</li>
+
+
+<!-- products -->
+<li>
+	<i id="g07K" class="sub" onclick="gic(this.id);" title="Sbalí skupinu"></i>
+	<a href="index.php?eid=15L14007K">Grafické karty</a>
+</li>
+<li>
+	<i id="g083" class="" onclick="gic(this.id);" title="Rozbalí skupinu"></i>
+	<a href="index.php?eid=15L140083">Procesory</a>
+</li>
+
+
+</ul>	<!-- /groups -->
+
+<script language="javascript" type="text/javascript"><!--
+var titAdd="Rozbalí skupinu"; var titSub="Sbalí skupinu"; gFillTitle();
+//--></script>
+aktualizováno: 25.4.2013  12:03<br>uživatelů on-line: 624
+</div>	
+<!-- /LEFT SIDE MENU -->
+
+
+	<!-- <script> document.body.className+=' js' </script>-->
+	
+	<div n:foreach="$flashes as $flash" class="flash {$flash->type}">{$flash->message}</div>
+
+	{include #content}
+	
+<!-- RIGHT SIDE MENU -->
+<div id="rightpart">
+<div class="rtxtbannerh4"><a href="http://www.alfacomp.cz/php/reklama.php?ban=3728" rel="nofollow"><img src="{$basePath}/images/807sams.jpg" width="174" height="366" alt=""></a></div>
+<div class="h5frametrl"><h5>nejsledovanější</h5></div>
+<div id="assocprod" class="infbox ibnopad">
+
+<form action="http://www.alfacomp.cz/php/basket.php" method="post"><input type="hidden" name="Redirect" value="index.php">
+<table class="prodassoc panoimg" cellspacing="0" title="notebook, AMD E1-1200 1.4GHz DC, 2GB DDR3, 320GB, DVDRW, 15.6&quot; 1366x768 mat LED, int. VGA, AMD A68M, wlan, glan, kamera, čtečka, 3x USB, HDMI, 6čl. aku a· 6h, 2.5kg, brašna, SUSE Linux Enterprise 11"><tbody><tr><td class="tdname" colspan="2">
+ <a href="http://www.alfacomp.cz/php/product.php?eid=10514000I0000001TMP">HP 655 (C4X78EA#BCM)</a></td></tr>
+<tr><td class="tdprice"><b>cena: 6 666,-</b></td>
+<td class="tdbuy"><input type="text" name="qty[85057]" value="1" class="quantity" maxlength="3"><input type="image" name="buy" src="{$basePath}/images/buy.gif"
+title="Vloží zboží do košíku, množství 0 vymaže položku"></td></tr>
+</tbody></table></form>
+
+<form action="http://www.alfacomp.cz/php/basket.php" method="post"><input type="hidden" name="Redirect" value="index.php">
+<table class="prodassoc panoimg" cellspacing="0" title="smartphone, Qualcomm APQ8064T 1.9GHz QC, Android 4.2, BT4.0, A-GPS, Wi-Fi 802.11ac/a/b/g/n, 13Mpx kam. + 2Mpx, HSUPA/EDGE, GSM Quad-Band, 16GB flash, 2GB RAM, microSDHC slot, 5&quot; Super AMOLED LCD 1080x1920, Li-Ion 2600mAh, CZ, NFC, LTE  (SIV)"><tbody><tr><td class="tdname" colspan="2"><a href="http://www.alfacomp.cz/php/product.php?eid=10514000I0000001WRM">Samsung Galaxy S4 Black Mist CZ + 32GB MicroSDHC karta</a></td></tr>
+<tr><td class="tdprice"><b>cena: 16 990,-</b></td>
+<td class="tdbuy"><input type="text" name="qty[89122]" value="1" class="quantity" maxlength="3"><input type="image" name="buy" src="{$basePath}/images/buy.gif"
+title="Vloží zboží do košíku, množství 0 vymaže položku"></td></tr>
+</tbody></table></form>
+</div>	<!-- assocprod -->
+</div>	<!-- /RIGHT SIDE MENU -->
+
+	
+	<!-- BOTTOM PAGE -->
+<div id="bottompage">
+<div id="bottommenu">
+<span><a href="http://www.alfacomp.cz/php/index.php?eid=12D140">RSS</a></span>
+<span class="space">&nbsp;</span><span><a href="http://www.alfacomp.cz/php/index.php?eid=114140">obchodní podmínky</a></span>
+<span class="space">&nbsp;</span><span><a href="http://www.alfacomp.cz/php/index.php?eid=120140">splátky</a></span>
+<span class="space">&nbsp;</span><span><a href="http://www.alfacomp.cz/old/php/podpora.php?akc=1&eid=103140">FAQ</a></span>
+<span class="space">&nbsp;</span><span><a href="http://www.alfacomp.cz/php/index.php?eid=10V140">kontakty</a></span>
+</div>
+<div id="copyright">Copyright &copy; 2013&nbsp;&nbsp;Yetti&nbsp;&nbsp;Všechna práva vyhrazena.</div>
+</div>
+<!-- /BOTTOM PAGE -->
+	
+	
+	
+	
+	
+	{block scripts}
+	<script src="{$basePath}/js/jquery.js"></script>
+	<script src="{$basePath}/js/netteForms.js"></script>
+	<script src="{$basePath}/js/main.js"></script>
+	{/block}
+</body>
+</html>
